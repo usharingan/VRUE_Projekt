@@ -16,3 +16,7 @@ VR UE Fragen:
 
 - wenn ein parent deaktiviert wird 
 	-> werden auch alle seinen kinder deaktiviert?
+
+- bin in einem Script
+	-> wie kann ich auf die trnasformation des "partents"/"owners" des scripts zugreifen??
+	(this, transform, Transform, gameObject und GameObject funktionieren nicht...)
