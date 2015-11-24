@@ -1,0 +1,14 @@
+VR UE Fragen:
+
+- was heisst denn "kontinuierliche Bewegung" bei der Kinect?
+	-> Add velocity constraint ?
+	Antwort: selber die Bewegungen definieren, kurze/lange Bewegung...	
+
+- wieso laeuft es nicht auf 2 PCs ? 
+	-> Verbindung bricht ab/ Server stuertzt ab
+	Antwort: war Fehler mit den Rigidbodies bei den Instrumenten, AppData, Local, Unity StackTrace, sollte nun laufen
+	
+- wieso kann ich alles clonen aus dem Git Repo aber es ist kein .git File dabei/
+	sieht es nicht als Repository ?
+	Antwort: .git Folder war versteckt. git clone HTTPS oder SSH... public/private SSH key...
+		 .gitignore File wichtig
