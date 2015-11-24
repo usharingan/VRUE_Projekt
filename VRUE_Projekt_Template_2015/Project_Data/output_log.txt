@@ -15,7 +15,99 @@ Platform assembly: E:\TU_Andi\VR_AR\VRUE_Projekt_Template_2015\Project_Data\Mana
 Loading E:\TU_Andi\VR_AR\VRUE_Projekt_Template_2015\Project_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: E:\TU_Andi\VR_AR\VRUE_Projekt_Template_2015\Project_Data\Managed\UnityInterface.dll (this message is harmless)
 Loading E:\TU_Andi\VR_AR\VRUE_Projekt_Template_2015\Project_Data\Managed\UnityInterface.dll into Unity Child Domain
-- Completed reload, in  0.360 seconds
+- Completed reload, in  0.466 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1280x800 60Hz; virtual: 1280x800 at 0,0
+Platform assembly: E:\TU_Andi\VR_AR\VRUE_Projekt_Template_2015\Project_Data\Managed\System.Core.dll (this message is harmless)
+Avatar Test
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+/Blockman_network(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+attached to parent network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+/VirtualHand(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+attached to parent network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UserManager must be instantiated using the ScriptableObject.CreateInstance method instead of new UserManager.
+ 
+(Filename:  Line: 503)
+
+UserManager Unity player 0added as UserManager player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server setname sent to player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+NetworkGUI Setname to:player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+OnServerInitialized: 128.130.246.102:12346
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server called initialize: NoError
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Platform assembly: E:\TU_Andi\VR_AR\VRUE_Projekt_Template_2015\Project_Data\Managed\System.dll (this message is harmless)
+Start VirtualHand
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UserManager Unity player 1added as UserManager player2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+RPC Call setname sent to player2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+New player connected from 127.0.0.1:64457
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Start VirtualHand
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+/VirtualHand(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+attached to parent network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UserManager player 1disconnected as player2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Player has disconnected 127.0.0.1:64457
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server destroying player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 4.502077 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2014.
+Total: 6.307797 ms (FindLiveObjects: 0.450696 ms CreateObjectMapping: 0.573880 ms MarkObjects: 0.575835 ms  DeleteObjects: 0.069901 ms)
+
