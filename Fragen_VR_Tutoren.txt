@@ -12,3 +12,7 @@ VR UE Fragen:
 	sieht es nicht als Repository ?
 	Antwort: .git Folder war versteckt. git clone HTTPS oder SSH... public/private SSH key...
 		 .gitignore File wichtig
+--------------------------------------------------
+
+- wenn ein parent deaktiviert wird 
+	-> werden auch alle seinen kinder deaktiviert?
