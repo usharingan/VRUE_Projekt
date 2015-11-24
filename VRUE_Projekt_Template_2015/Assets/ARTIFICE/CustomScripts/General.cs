@@ -47,9 +47,13 @@ public class General : MonoBehaviour {
 					{
 						Debug.Log("keine hand da");
 					}else{
-						if(virtualhand.GetComponents<SpaceMouseManipulation>() == null)
+							if(virtualhand.GetComponents<TrackSpaceMouse>().Length == 0)
 						{
-							virtualhand.AddComponent(typeof(SpaceMouseManipulation));
+							TrackSpaceMouse tmp = virtualhand.AddComponent(typeof(TrackSpaceMouse)) as TrackSpaceMouse;
+							tmp.deviceName = "SpaceMouse";
+							tmp.scalePosition = 20;
+							tmp.enabled = true;
+							tmp.isTracked();
 						}
 					}
 				}
