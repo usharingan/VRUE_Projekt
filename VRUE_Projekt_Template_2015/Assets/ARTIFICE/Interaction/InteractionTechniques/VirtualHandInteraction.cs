@@ -50,7 +50,9 @@ public class VirtualHandInteraction : ObjectSelectionBase
 	protected override void UpdateSelect()
 	{
 		//if (this.transform.parent.GetType().ToString() == "Spacemouse") {
+		if (this.transform.parent != null && this.transform.parent.FindChild ("TrackerObject") != null) {
 			tracker = this.transform.parent.FindChild ("TrackerObject").gameObject;
+		}
 		//}
 
 		if(tracker)
