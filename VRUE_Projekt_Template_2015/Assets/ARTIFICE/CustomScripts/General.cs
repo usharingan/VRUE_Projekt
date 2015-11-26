@@ -49,11 +49,16 @@ public class General : MonoBehaviour {
 					}else{
 							if(virtualhand.GetComponents<TrackSpaceMouse>().Length == 0)
 						{
-							TrackSpaceMouse tmp = virtualhand.AddComponent(typeof(TrackSpaceMouse)) as TrackSpaceMouse;
+							/*TrackSpaceMouse tmp = virtualhand.AddComponent(typeof(TrackSpaceMouse)) as TrackSpaceMouse;
 							tmp.deviceName = "SpaceMouse";
 							tmp.scalePosition = 20;
 							tmp.enabled = true;
-							tmp.isTracked();
+							tmp.isTracked();*/
+
+							virtualhand.transform.parent = spacemouse.transform;
+						}else{
+							virtualhand.GetComponent<TrackBase>().isTracked();
+							virtualhand.GetComponent<TrackBase>().setVisability(spacemouse,true);
 						}
 					}
 				}
