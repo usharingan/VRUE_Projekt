@@ -12,11 +12,16 @@ VR UE Fragen:
 	sieht es nicht als Repository ?
 	Antwort: .git Folder war versteckt. git clone HTTPS oder SSH... public/private SSH key...
 		 .gitignore File wichtig
+
+- bin in einem Script
+	-> wie kann ich auf die trnasformation des "partents"/"owners" des scripts zugreifen??
+	Antwort: gameObject 
 --------------------------------------------------
 
 - wenn ein parent deaktiviert wird 
 	-> werden auch alle seinen kinder deaktiviert?
 
-- bin in einem Script
-	-> wie kann ich auf die trnasformation des "partents"/"owners" des scripts zugreifen??
-	(this, transform, Transform, gameObject und GameObject funktionieren nicht...)
+- no gravity (Obj bleiben im Raum wo wir wollen)
+	-> selektieren, manipulieren -> sie fallen auf dem boden (gravity da!) oder sie schweben weg...??
+
+
