@@ -3,7 +3,7 @@ TODO:
 [x] Assets: Models + Music
 [x] Fragestunde, Fehler
 [ ] Test Zusammenspiel von Kinect mit SpaceMouse
-[ ] Animationen Models
+[x] Animationen Models
 [ ] Interactionstechniken - GoGo
 [ ] Humanoid Asset
 [ ] SpaceMouse - position veraendern + aktivieren

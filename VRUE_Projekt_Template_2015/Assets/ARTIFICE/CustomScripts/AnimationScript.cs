@@ -8,6 +8,13 @@ public class AnimationScript : MonoBehaviour {
 	Quaternion from, to;
 	public float speed;
 
+	GameObject cello; 
+	GameObject sax;
+	GameObject guitar;
+	GameObject flute;
+	GameObject drum;
+	GameObject violin;
+
 
 	//cheat - temporaer?
 	public GameObject currentGameObj;
@@ -20,6 +27,13 @@ public class AnimationScript : MonoBehaviour {
 		from = Quaternion.Euler(new Vector3(0, 0, -20));
 		to = Quaternion.Euler(new Vector3(0, 0, 20));
 		speed = 0.1F;
+
+		cello = GameObject.Find("Cello"); 
+		sax = GameObject.Find("Sax"); 
+		guitar = GameObject.Find("Guitar"); 
+		flute  = GameObject.Find("Flute"); 
+		drum = GameObject.Find("Drum"); 
+		violin = GameObject.Find("Violin"); 
 	}
 	
 	// Update is called once per frame
@@ -37,7 +51,21 @@ public class AnimationScript : MonoBehaviour {
 		 */
 
 	// TODO !
-
+	// custom rotation for each individual instrument! :D
+/*		if ((this == cello) || (this == sax) || (this == drum) || (this == guitar)) {
+			transform.Rotate (0, 20 * Time.deltaTime, 0);
+		} else if () {
+		
+		}*/
+		if(gameObject.GetInstanceID() == violin.GetInstanceID()){
+			transform.Rotate (0, 20 * Time.deltaTime, /*20 * Time.deltaTime*/0);
+		}
+		else if (gameObject.GetInstanceID() == flute.GetInstanceID()){
+			transform.Rotate (0, 0, -10 * Time.deltaTime);
+		}
+		else{
+			transform.Rotate (0, 20 * Time.deltaTime, 0);
+		}
 	/*	if(gameObject.tranform.rotation.z > -20){
 
 //		currentGameObj.transform.rotation = Quaternion.Slerp (from, to, Time.time * speed);
