@@ -3,11 +3,12 @@ TODO:
 [x] Assets: Models + Music
 [x] Fragestunde, Fehler
 [ ] Test Zusammenspiel von Kinect mit SpaceMouse
-[x] Animationen Models
+[x] Animationen Models 
 [ ] Interactionstechniken - GoGo
-[ ] Humanoid Asset
 [ ] SpaceMouse - position veraendern + aktivieren
 [ ] SpaceMouse - Objekte austauschen (wenn Instrument nicht aktiv) 
 [ ] Ein- und Auswaehlen der Objekte fuer Kinect
 [ ] Kinect - kontinuierliche Bewegung
 [ ] SpaceMouse - Volumen veraendern
+[x] Humanoid Asset - Search, Import
+[ ] Humanoid Asset - Einbinden, alten ersetzen
