@@ -39,9 +39,7 @@ public class KinectInputReceiver : MonoBehaviour {
 		flute  = GameObject.Find("Flute"); 
 		drum = GameObject.Find("Drum"); 
 	
-		virtualHand = GameObject.Find ("VirtualHand(Clone)");
 
-		vH_Interaction = virtualHand.GetComponents<VirtualHandInteraction> () [0];
 
 		selectedInstruments = new Hashtable();
 
@@ -77,6 +75,10 @@ public class KinectInputReceiver : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		virtualHand = GameObject.Find ("VirtualHand(Clone)");
+		
+		vH_Interaction = virtualHand.GetComponent<VirtualHandInteraction> ();
 
 		// 2) 
 		// check & update selected Instruments hashtable
