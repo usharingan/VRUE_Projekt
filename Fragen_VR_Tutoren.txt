@@ -24,4 +24,10 @@ VR UE Fragen:
 - no gravity (Obj bleiben im Raum wo wir wollen)
 	-> selektieren, manipulieren -> sie fallen auf dem boden (gravity da!) oder sie schweben weg...??
 
+- wieso ist der actor Mickey bei Andreas schon da und bei mir nicht?
+
+- Kinect Script - virtual Hand = nullpointer...?
+
+- 
+
 
