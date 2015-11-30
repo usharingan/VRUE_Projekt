@@ -63,7 +63,12 @@ public class SpawnPrefab : MonoBehaviour {
 			SpawnNetworkObject();
 		}
 	}
-	
+
+	public void spawn()
+	{
+		SpawnNetworkObject ();
+	}
+
 	/// <summary>
 	/// Uses Network.Instantiate to create an Object
 	/// </summary>
@@ -81,8 +86,8 @@ public class SpawnPrefab : MonoBehaviour {
 	{
 		string objName="/"+playerPrefab.name+"(Clone)";
 		Debug.Log(objName);
-		newObj=GameObject.Find(objName);
-		
+		newObj = GameObject.Find(objName);
+
 		if((GameObject.Find(PathInHierarchy)!=null)&&(newObj!=null))
 		{
 			Debug.Log("attached to parent network");
@@ -93,6 +98,8 @@ public class SpawnPrefab : MonoBehaviour {
 			newObj.transform.localScale=locScale;
 			newObj.transform.localPosition=locPos;
             newObj.transform.localRotation = locRot;
+
+			newObj.transform.tag = playerPrefab.name;
 		}
 	}
 	

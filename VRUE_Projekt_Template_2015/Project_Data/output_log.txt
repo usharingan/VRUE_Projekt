@@ -15,36 +15,80 @@ Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Dat
 Loading E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Data\Managed\UnityInterface.dll (this message is harmless)
 Loading E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Data\Managed\UnityInterface.dll into Unity Child Domain
-- Completed reload, in  0.421 seconds
+- Completed reload, in  0.267 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1280x800 60Hz; virtual: 1280x800 at 0,0
 Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Data\Managed\System.Core.dll (this message is harmless)
-Connect called: NoError
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-/VirtualHand(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-attached to parent network
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-OnConnectedToServer()
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
 Avatar Test
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-/Blockman_network(Clone)
+Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Data\Managed\System.dll (this message is harmless)
+/VirtualHand(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
 attached to parent network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnityException: Tag: VirtualHand is not defined!
+  at (wrapper managed-to-native) UnityEngine.Component:set_tag (string)
+  at SpawnPrefab.relocateObject () [0x00000] in <filename unknown>:0 
+  at SpawnPrefab.relocateObjectRPC () [0x00000] in <filename unknown>:0 
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[])
+SpawnPrefab:SpawnNetworkObject()
+SpawnPrefab:OnServerInitialized()
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkBase:StartServer()
+NetworkGUI:MakeWindow(Int32)
+UnityEngine.GUI:CallWindowDelegate(WindowFunction, Int32, GUISkin, Int32, Single, Single, GUIStyle)
+ 
+(Filename:  Line: -1)
+
+UserManager must be instantiated using the ScriptableObject.CreateInstance method instead of new UserManager.
+ 
+(Filename:  Line: 503)
+
+UserManager Unity player 0added as UserManager player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server setname sent to player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+NetworkGUI Setname to:player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+OnServerInitialized: 128.130.253.158:12346
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server called initialize: NoError
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Start VirtualHand
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UserManager Unity player 1added as UserManager player2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+RPC Call setname sent to player2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+New player connected from 127.0.0.1:53767
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Start VirtualHand
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -56,166 +100,524 @@ attached to parent network
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-NetworkGUI Setname to:player2
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Start VirtualHand
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Data\Managed\System.dll (this message is harmless)
-Start VirtualHand
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+UnityException: Tag: VirtualHand is not defined!
+  at (wrapper managed-to-native) UnityEngine.Component:set_tag (string)
+  at SpawnPrefab.relocateObject () [0x00000] in <filename unknown>:0 
+  at SpawnPrefab.relocateObjectRPC () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-addInteractionObj
+Object13680 selected.
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Selected11446
+Object 13680 unselected
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-removeInteractionObj
+View ID SceneID: 140 Level Prefix: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'relocateObjectRPC' because the networkView 'SceneID: 140 Level Prefix: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID SceneID: 140 Level Prefix: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'relocateObjectRPC' because the networkView 'SceneID: 140 Level Prefix: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'controlSelectedObjects' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'updateTransform' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Could't invoke RPC function 'controlSelectedObjects' because the networkView 'AllocatedID: 0' doesn't exist
+ 
+(Filename:  Line: 2474)
+
+UnloadTime: 6.192522 ms
+Avatar Test
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Unselected all
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-addInteractionObj
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Selected11644
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-removeInteractionObj
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Unselected all
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-addInteractionObj
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Selected11644
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at VirtualHandInteraction.OnTriggerExit (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-removeInteractionObj
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Unselected all
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-addInteractionObj
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Selected11286
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-removeInteractionObj
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Unselected all
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-UnloadTime: 7.177483 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2031.
-Total: 6.415887 ms (FindLiveObjects: 0.769417 ms CreateObjectMapping: 0.109497 ms MarkObjects: 0.690227 ms  DeleteObjects: 0.091411 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2014.
+Total: 5.699291 ms (FindLiveObjects: 0.426261 ms CreateObjectMapping: 0.102165 ms MarkObjects: 0.966420 ms  DeleteObjects: 0.114386 ms)
 
