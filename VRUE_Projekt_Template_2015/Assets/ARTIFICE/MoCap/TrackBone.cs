@@ -28,7 +28,7 @@ using UnityEngine;
 using System;
 
 /// <summary>
-/// Provides tracking data received from Kinect/VRPN-Source toUnity3D game objects. 
+/// Provides tracking data received from Kinect/VRPN-Source to Unity3D game objects. 
 /// Inherits from abstract class TrackProvider. 
 /// </summary>
 public class TrackBone : TrackProvider 

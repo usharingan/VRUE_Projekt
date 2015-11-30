@@ -6,9 +6,10 @@ TODO:
 [x] Animationen Models 
 [ ] Interactionstechniken - GoGo
 [ ] SpaceMouse - position veraendern + aktivieren 
+[ ] Spawn Instruments
 [ ] Ein- und Auswaehlen der Objekte fuer Kinect
-[ ] Kinect - kontinuierliche Bewegung
-[ ] SpaceMouse - Volumen veraendern
+[ ] Kinect - kontinuierliche Bewegung + Script
+[ ] SpaceMouse - Volume veraendern
 [x] Humanoid Asset - Search, Import
 [x] Humanoid Asset - Einbinden, alten ersetzen
 [x] Podest fuer Mickey

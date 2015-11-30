@@ -1,9 +1,9 @@
-/* =====================================================================================
+﻿/* =====================================================================================
  * ARTiFICe - Augmented Reality Framework for Distributed Collaboration
  * ====================================================================================
  * Copyright (c) 2010-2012 
  * 
- * Annette Mossel, Christian Sch�nauer, Georg Gerstweiler, Hannes Kaufmann
+ * Annette Mossel, Christian Schönauer, Georg Gerstweiler, Hannes Kaufmann
  * mossel | schoenauer | gerstweiler | kaufmann @ims.tuwien.ac.at
  * Interactive Media Systems Group, Vienna University of Technology, Austria
  * www.ims.tuwien.ac.at
@@ -28,63 +28,95 @@ using UnityEngine;
 using System.Collections;
 
 /// <summary>
-/// Class to select and manipulate scene objects with Virtual hand interaction technique (IT). 
+/// Class to select and manipulate scene objects with gogo interaction technique (IT). 
 /// 
-/// Virtual hand is a 1st person view IT. The VirtualHand GameObject, this class is attached to, is a direct child of the interaction
-/// device gameObject. 
+/// GoGo is a 1st person view IT
 /// </summary>
-public class VirtualHandInteraction : ObjectSelectionBase
+public class GoGoInteraction : ObjectSelectionBase
 {
-    GameObject tracker = null;
-
-    /// <summary>
-    /// </summary>
-    public void Start()
-    {
-        tracker = GameObject.Find("TrackerObject");
-		Debug.Log("Start VirtualHand");
-    }
-    /// <summary>
-    /// Implementation of concrete IT selection behaviour. 
-    /// </summary>
+	/* ------------------ VRUE Tasks START -------------------
+	* 	Implement GoGo interaction technique
+	----------------------------------------------------------------- */
+	
+	public float D = 3.0f;
+	public float k = 0.1f;
+	
+	public float distance;
+	public float newDistance;
+	
+	
+	GameObject tracker = null;
+	GameObject torso = null;
+	GameObject origin = null;
+	
+	void start()
+	{
+		tracker = GameObject.Find("TrackerObject");
+		torso = GameObject.Find("VirtualCamera");
+		
+	}
+	
 	protected override void UpdateSelect()
 	{
-		//if (this.transform.parent.GetType().ToString() == "Spacemouse") {
-		if (this.transform.parent != null && this.transform.parent.FindChild ("TrackerObject") != null) {
-			tracker = this.transform.parent.FindChild ("TrackerObject").gameObject;
+		torso = GameObject.Find("VirtualCamera");
+		tracker = GameObject.Find("TrackerObject");
+		origin = GameObject.Find ("InteractionOrigin");
+		
+		if (D <= 0) {
+			D = 0.1f;
 		}
-		//}
+		if (k <= 0) {
+			k = 0.1f;
+		}
+		if (k >= 1) {
+			k = 0.9f;
+		}
 
-		if(tracker)
-		{
-	        // INTERACTION TECHNIQUE THINGS ------------------------------------------------
-	        if (tracker.transform.parent.GetComponent<TrackBase>().isTracked())
-	        {
-	            // show virtual hand -> physical hand is autmatically rendert due to tracking state
+		if (tracker) {
+			// INTERACTION TECHNIQUE THINGS ------------------------------------------------
+			if (tracker.transform.parent.GetComponent<TrackBase> ().isTracked ()) {
+				
 				tracker.transform.parent.GetComponent<TrackBase>().setVisability(gameObject, true);
-	
-	            //Update transform of the selector object (virtual hand)
-	            this.transform.position = tracker.transform.position;
-	            this.transform.rotation = tracker.transform.rotation;
-	    	
-	            // Transform (translate and rotate) selected object depending on of virtual hand's transformation
-	            if (selected)
-	            {
-	                this.transformInter(this.transform.position, this.transform.rotation);
-	            }
-	        }else 
-	        {
-	            // make virtual hand invisible -> physical hand is autmatically rendert due to tracking state
-				tracker.transform.parent.GetComponent<TrackBase>().setVisability(gameObject, false);
-	        }
-		}
-		else
-		{
-			Debug.Log("No GameObject with name - TrackerObject - found in scene");
-		}
-  	}
 
-	/// <summary>
+				distance = Mathf.Sqrt((tracker.transform.position.x - origin.transform.position.x) * (tracker.transform.position.x - origin.transform.position.x) + 
+				                      (tracker.transform.position.y - origin.transform.position.y) * (tracker.transform.position.y - origin.transform.position.y) + 
+				                      (tracker.transform.position.z - origin.transform.position.z) * (tracker.transform.position.z - origin.transform.position.z));
+				
+				float normX = (tracker.transform.position.x - origin.transform.position.x) / distance;
+				float normY = (tracker.transform.position.y - origin.transform.position.y) / distance;
+				float normZ = (tracker.transform.position.z - origin.transform.position.z) / distance;
+				
+				
+				
+				Vector3 normalizedVector = new Vector3(normX, normY,normZ);
+				//Vector3 normalizedVector = (transform.position - torso.transform.position) / distance;
+				
+				newDistance = 0.0f;
+				if(distance >= D)
+				{
+					newDistance = distance + k * ((distance - D) * (distance - D));
+					//this.transform.position = new Vector3(normalizedVector.x * newDistance, normalizedVector.y * newDistance, normalizedVector.z * newDistance);
+					
+					this.transform.position = tracker.transform.position + (normalizedVector * newDistance);
+					this.transform.rotation = tracker.transform.rotation;
+					
+				}
+				// Transform (translate and rotate) selected object depending on of virtual hand's transformation
+				if (selected)
+				{
+					this.transformInter(this.transform.position, this.transform.rotation);
+				}
+				
+			}else{
+				tracker.transform.parent.GetComponent<TrackBase>().setVisability(gameObject, false);
+			}
+		}
+	}
+	
+	// ------------------ VRUE Tasks END ----------------------------
+
+	
+    /// <summary>
     /// Callback
     /// If our selector-Object collides with anotherObject we store the other object 
     /// 
@@ -92,13 +124,14 @@ public class VirtualHandInteraction : ObjectSelectionBase
     /// </summary>
     /// <param name="other">GameObject giben by the callback</param>
     public void OnTriggerEnter(Collider other)
-    {
+    {		
         if (isOwnerCallback())
         {
             GameObject collidee = other.gameObject;
 
             if (hasObjectController(collidee))
             {
+
                 collidees.Add(collidee.GetInstanceID(), collidee);
                 //Debug.Log(collidee.GetInstanceID());
 
