@@ -99,6 +99,8 @@ public class VirtualHandInteraction : ObjectSelectionBase
 
             if (hasObjectController(collidee))
             {
+				Debug.Log(collidee.name);
+
                 collidees.Add(collidee.GetInstanceID(), collidee);
                 //Debug.Log(collidee.GetInstanceID());
 
