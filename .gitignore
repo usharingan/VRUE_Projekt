@@ -34,7 +34,6 @@ obj/
 *.unityproj
 *.booproj
 *.cs.meta
-*.dae.meta
 *.mat.meta
 *.mtl.meta
 
