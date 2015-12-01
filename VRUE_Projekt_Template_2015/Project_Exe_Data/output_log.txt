@@ -1,0 +1,102 @@
+Initialize engine version: 4.6.8f1 (583461196f73)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 10.18.13.5362]
+    Renderer: NVIDIA GeForce 410M
+    Vendor:   NVIDIA
+    VRAM:     973 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityInterface.dll (this message is harmless)
+Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityInterface.dll into Unity Child Domain
+- Completed reload, in  0.093 seconds
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\System.Core.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1771)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1771)
+
+Avatar Test
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\System.dll (this message is harmless)
+/VirtualHand(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+attached to parent network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UserManager must be instantiated using the ScriptableObject.CreateInstance method instead of new UserManager.
+ 
+(Filename:  Line: 503)
+
+UserManager Unity player 0added as UserManager player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server setname sent to player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+NetworkGUI Setname to:player1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+OnServerInitialized: 128.131.193.150:12346
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server called initialize: NoError
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Start VirtualHand
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Object13740 selected.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+addInteractionObj
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Selected11116
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1771)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1771)
+
+UnloadTime: 4.726953 ms
+Avatar Test
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 2044.
+Total: 2.655246 ms (FindLiveObjects: 0.247783 ms CreateObjectMapping: 0.063534 ms MarkObjects: 0.632410 ms  DeleteObjects: 0.041541 ms)
+
