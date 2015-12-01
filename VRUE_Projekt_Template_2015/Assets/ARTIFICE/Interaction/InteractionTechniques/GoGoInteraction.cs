@@ -60,8 +60,10 @@ public class GoGoInteraction : ObjectSelectionBase
 	{
 		torso = GameObject.Find("VirtualCamera");
 		tracker = GameObject.Find("TrackerObject");
-		origin = GameObject.Find ("InteractionOrigin");
-		
+//		origin = GameObject.Find ("VirtualCamera");    // TEST!  - "spine_upper"... geht nicht :/
+//		origin = GameObject.Find ("Mickey_rotated2");
+		origin = GameObject.Find ("head");
+
 		if (D <= 0) {
 			D = 0.1f;
 		}
