@@ -71,17 +71,49 @@ public class VirtualHandInteraction : ObjectSelectionBase
 	            if (selected)
 	            {
 					if (Input.GetButtonDown("delete") && Network.isClient){
+						object[] indices = new object[collidees.Count];
+						int i = 0;
 						foreach (DictionaryEntry tmpobj in collidees)
 						{
-							Network.Destroy(((GameObject)tmpobj.Value).networkView.viewID);
-							removeInteractionObj((GameObject)tmpobj.Value);
+							GameObject current = (GameObject)tmpobj.Value;
+
+							if(!current.GetComponent<AudioSource>().enabled)
+							{
+								Network.Destroy(current.networkView.viewID);
+								removeInteractionObj(current);
+								indices[i] = tmpobj.Key;
+							}else{
+								indices[i] = null;
+							}
+							i++;
 							//collidees.Remove(tmpobj.Key);
 						}
-
 						//Clear();
-						collidees.Clear();
+						for(int j = 0; j < indices.Length; j++)
+						{
+							if(indices[j] != null)
+								collidees.Remove(indices[j]);
+								//collidees.Clear();
+						}
 					}else{
-	                	this.transformInter(this.transform.position, this.transform.rotation);
+						if(Network.isClient)
+						{
+							bool isPlaying = false;
+							foreach (DictionaryEntry tmpobj in collidees)
+							{
+								GameObject current = (GameObject)tmpobj.Value;
+								if(current.GetComponent<AudioSource>().enabled)
+									isPlaying = true;
+							}
+							if(isPlaying)
+							{
+
+							}else{
+								this.transformInter(this.transform.position, this.transform.rotation);
+							}
+						}else{
+	                		this.transformInter(this.transform.position, this.transform.rotation);
+						}
 					}
 	            }
 	        }else 
