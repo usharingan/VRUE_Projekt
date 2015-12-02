@@ -99,14 +99,26 @@ public class VirtualHandInteraction : ObjectSelectionBase
 						if(Network.isClient)
 						{
 							bool isPlaying = false;
+							GameObject referenz = null;
 							foreach (DictionaryEntry tmpobj in collidees)
 							{
 								GameObject current = (GameObject)tmpobj.Value;
 								if(current.GetComponent<AudioSource>().enabled)
+								{
 									isPlaying = true;
+									referenz = current;
+								}
 							}
 							if(isPlaying)
 							{
+
+								float distY = (this.transform.position.y - referenz.transform.position.y);
+								float distX = (this.transform.position.y - referenz.transform.position.x);
+								distY *= 0.01f;
+								distX *= 0.01f;
+
+								referenz.GetComponent<AudioSource>().volume += distY;
+								referenz.GetComponent<AudioSource>().pitch += distX;
 
 							}else{
 								this.transformInter(this.transform.position, this.transform.rotation);
