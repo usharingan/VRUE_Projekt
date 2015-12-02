@@ -80,6 +80,11 @@ public class UserManagementObjectController : ExclusiveAccessObjectController
         accessGrantedPlayer = UserManager.instance.getNetworkPlayer(accessGrantedName);
     }
 	
+	public void setAccessGrantedPlayer()
+	{
+		accessGrantedPlayer = UserManager.instance.getNetworkPlayer(accessGrantedName);
+	}
+
 	void OnServerInitialized(NetworkPlayer player) 
 	{
 		UserManager.instance.AddNewPlayer(player,false);
