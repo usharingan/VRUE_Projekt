@@ -70,7 +70,19 @@ public class VirtualHandInteraction : ObjectSelectionBase
 	            // Transform (translate and rotate) selected object depending on of virtual hand's transformation
 	            if (selected)
 	            {
-	                this.transformInter(this.transform.position, this.transform.rotation);
+					if (Input.GetButtonDown("delete") && Network.isClient){
+						foreach (DictionaryEntry tmpobj in collidees)
+						{
+							Network.Destroy(((GameObject)tmpobj.Value).networkView.viewID);
+							removeInteractionObj((GameObject)tmpobj.Value);
+							//collidees.Remove(tmpobj.Key);
+						}
+
+						//Clear();
+						collidees.Clear();
+					}else{
+	                	this.transformInter(this.transform.position, this.transform.rotation);
+					}
 	            }
 	        }else 
 	        {
