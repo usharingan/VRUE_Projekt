@@ -37,8 +37,6 @@ public class VirtualHandInteraction : ObjectSelectionBase
 {
     GameObject tracker = null;
 
-	public float distY = 0;
-	public float distX = 0;
 
     /// <summary>
     /// </summary>
@@ -124,20 +122,16 @@ public class VirtualHandInteraction : ObjectSelectionBase
 								float distX = (this.transform.position.y - referenz.transform.position.x);
 								distY *= 0.01f;
 								distX *= 0.01f;*/
-								distY = this.transform.localRotation.y * 4.0f * this.transform.rotation.y;
-								distX = this.transform.localRotation.x * 4.0f * this.transform.rotation.x;
-								if (distX > 1)
-									distX = 1;
-								if(distX < 0)
-									distX = 0;
-								if (distY > 1)
-									distY = 1;
+
+								float distY = this.transform.localRotation.y * 8.0f * this.transform.rotation.y;;
+
 								if(distY < 0)
 									distY = 0;
 
-								referenz.GetComponent<AudioSource>().volume = distY;
+								AudioSource tmpAudio = referenz.GetComponent<AudioSource>();
 
-								referenz.GetComponent<AudioSource>().pitch = distX;
+								tmpAudio.pitch = distY;
+								//referenz.GetComponent<AudioSource>().pitch = distX;
 
 
 								tracker.transform.position = referenz.transform.position;
@@ -204,6 +198,9 @@ public class VirtualHandInteraction : ObjectSelectionBase
             if (hasObjectController(collidee))
             {
                 collidees.Remove(collidee.GetInstanceID());
+				other.GetComponent<Rigidbody>().isKinematic = false;
+				other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+				other.GetComponent<Rigidbody>().isKinematic = true;
 
                 // change color so user knows of intersection end
                 collidee.renderer.material.SetColor("_Color", Color.white);
