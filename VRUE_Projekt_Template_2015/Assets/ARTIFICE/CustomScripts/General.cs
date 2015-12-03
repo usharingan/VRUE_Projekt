@@ -9,7 +9,7 @@ public class General : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		Physics.gravity = Vector3.zero;
 	}
 
 	

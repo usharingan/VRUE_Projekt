@@ -37,6 +37,9 @@ public class VirtualHandInteraction : ObjectSelectionBase
 {
     GameObject tracker = null;
 
+	public float distY = 0;
+	public float distX = 0;
+
     /// <summary>
     /// </summary>
     public void Start()
@@ -70,7 +73,77 @@ public class VirtualHandInteraction : ObjectSelectionBase
 	            // Transform (translate and rotate) selected object depending on of virtual hand's transformation
 	            if (selected)
 	            {
-	                this.transformInter(this.transform.position, this.transform.rotation);
+					if (Input.GetButtonDown("delete") && Network.isClient){
+						object[] indices = new object[collidees.Count];
+						int i = 0;
+						foreach (DictionaryEntry tmpobj in collidees)
+						{
+							GameObject current = (GameObject)tmpobj.Value;
+
+							if(!current.GetComponent<AudioSource>().enabled)
+							{
+								Network.Destroy(current.networkView.viewID);
+								removeInteractionObj(current);
+								indices[i] = tmpobj.Key;
+							}else{
+								indices[i] = null;
+							}
+							i++;
+							//collidees.Remove(tmpobj.Key);
+						}
+						//Clear();
+						for(int j = 0; j < indices.Length; j++)
+						{
+							if(indices[j] != null)
+								collidees.Remove(indices[j]);
+								//collidees.Clear();
+						}
+					}else{
+						if(Network.isClient)
+						{
+							bool isPlaying = false;
+							GameObject referenz = null;
+							foreach (DictionaryEntry tmpobj in collidees)
+							{
+								GameObject current = (GameObject)tmpobj.Value;
+								if(current.GetComponent<AudioSource>().enabled)
+								{
+									isPlaying = true;
+									referenz = current;
+								}
+							}
+							if(isPlaying)
+							{
+
+								/*float distY = (this.transform.position.y - referenz.transform.position.y);
+								float distX = (this.transform.position.y - referenz.transform.position.x);
+								distY *= 0.01f;
+								distX *= 0.01f;*/
+								distY = this.transform.localRotation.y * 4.0f * this.transform.rotation.y;
+								distX = this.transform.localRotation.x * 4.0f * this.transform.rotation.x;
+								if (distX > 1)
+									distX = 1;
+								if(distX < 0)
+									distX = 0;
+								if (distY > 1)
+									distY = 1;
+								if(distY < 0)
+									distY = 0;
+
+								referenz.GetComponent<AudioSource>().volume = distY;
+
+								referenz.GetComponent<AudioSource>().pitch = distX;
+
+
+								tracker.transform.position = referenz.transform.position;
+
+							}else{
+								this.transformInter(this.transform.position, this.transform.rotation);
+							}
+						}else{
+	                		this.transformInter(this.transform.position, this.transform.rotation);
+						}
+					}
 	            }
 	        }else 
 	        {
@@ -99,6 +172,8 @@ public class VirtualHandInteraction : ObjectSelectionBase
 
             if (hasObjectController(collidee))
             {
+				Debug.Log(collidee.name);
+
                 collidees.Add(collidee.GetInstanceID(), collidee);
                 //Debug.Log(collidee.GetInstanceID());
 
