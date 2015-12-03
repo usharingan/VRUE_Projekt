@@ -1,26 +1,25 @@
 Initialize engine version: 4.6.8f1 (583461196f73)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 9.0c [nvd3dum.dll 10.18.13.5362]
-    Renderer: NVIDIA GeForce 410M
-    Vendor:   NVIDIA
-    VRAM:     973 MB (via DXGI)
-    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+    Version:  Direct3D 9.0c [igdumdx32.dll 8.14.10.1930]
+    Renderer: Mobile Intel(R) 965 Express Chipset Family
+    Vendor:   Intel
+    VRAM:     64 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=0 NativeShadow=1 DF16=0 INTZ=0 RAWZ=0 NULL=0 RESZ=0 SlowINTZ=0
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityInterface.dll (this message is harmless)
-Loading C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityInterface.dll into Unity Child Domain
-- Completed reload, in  0.093 seconds
+Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityInterface.dll (this message is harmless)
+Loading E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\UnityInterface.dll into Unity Child Domain
+- Completed reload, in  1.090 seconds
 <RI> Initializing input.
-XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
-Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\System.Core.dll (this message is harmless)
+desktop: 1280x800 60Hz; virtual: 1280x800 at 0,0
+Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\System.Core.dll (this message is harmless)
 The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1771)
@@ -33,7 +32,7 @@ Avatar Test
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Platform assembly: C:\Users\Oana\Dropbox\Uni\Master\Sem_3\Virtual_Reality\UE\Projekt\Repo\VRUE_Projekt\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\System.dll (this message is harmless)
+Platform assembly: E:\TU_Andi\VR_AR\VRGit\VRUE_Projekt_Template_2015\Project_Exe_Data\Managed\System.dll (this message is harmless)
 /VirtualHand(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
@@ -58,7 +57,7 @@ NetworkGUI Setname to:player1
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-OnServerInitialized: 128.131.193.150:12346
+OnServerInitialized: 128.130.250.105:12346
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -70,33 +69,47 @@ Start VirtualHand
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Object13740 selected.
+UserManager Unity player 1added as UserManager player2
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-addInteractionObj
+RPC Call setname sent to player2
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Selected11116
+New player connected from 127.0.0.1:58079
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1771)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1771)
-
-UnloadTime: 4.726953 ms
-Avatar Test
+/VirtualHand(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+attached to parent network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 2044.
-Total: 2.655246 ms (FindLiveObjects: 0.247783 ms CreateObjectMapping: 0.063534 ms MarkObjects: 0.632410 ms  DeleteObjects: 0.041541 ms)
+Start VirtualHand
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Object13716 selected.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Object 13716 unselected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UserManager player 1disconnected as player2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Player has disconnected 127.0.0.1:58079
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Server destroying player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
