@@ -37,6 +37,9 @@ public class VirtualHandInteraction : ObjectSelectionBase
 {
     GameObject tracker = null;
 
+	public float distY = 0;
+	public float distX = 0;
+
     /// <summary>
     /// </summary>
     public void Start()
@@ -112,13 +115,27 @@ public class VirtualHandInteraction : ObjectSelectionBase
 							if(isPlaying)
 							{
 
-								float distY = (this.transform.position.y - referenz.transform.position.y);
+								/*float distY = (this.transform.position.y - referenz.transform.position.y);
 								float distX = (this.transform.position.y - referenz.transform.position.x);
 								distY *= 0.01f;
-								distX *= 0.01f;
+								distX *= 0.01f;*/
+								distY = this.transform.localRotation.y * 4.0f * this.transform.rotation.y;
+								distX = this.transform.localRotation.x * 4.0f * this.transform.rotation.x;
+								if (distX > 1)
+									distX = 1;
+								if(distX < 0)
+									distX = 0;
+								if (distY > 1)
+									distY = 1;
+								if(distY < 0)
+									distY = 0;
 
-								referenz.GetComponent<AudioSource>().volume += distY;
-								referenz.GetComponent<AudioSource>().pitch += distX;
+								referenz.GetComponent<AudioSource>().volume = distY;
+
+								referenz.GetComponent<AudioSource>().pitch = distX;
+
+
+								tracker.transform.position = referenz.transform.position;
 
 							}else{
 								this.transformInter(this.transform.position, this.transform.rotation);

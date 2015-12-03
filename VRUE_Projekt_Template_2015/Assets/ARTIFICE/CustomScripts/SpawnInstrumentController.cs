@@ -212,7 +212,7 @@ public class SpawnInstrumentController : MonoBehaviour {
 			newObj.transform.localPosition=locPos;
 			newObj.transform.localRotation = locRot;
 			
-			newObj.transform.tag = name;
+			//newObj.transform.tag = name;
 			
 			addAllComponents(newObj, viewID, coliderSize, coliderCenter, clip);
 		}
