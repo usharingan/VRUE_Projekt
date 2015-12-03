@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class KinectInputReceiver : MonoBehaviour {
@@ -13,13 +13,21 @@ public class KinectInputReceiver : MonoBehaviour {
 	GameObject virtualHand;
 	VirtualHandInteraction vH_Interaction;
 
+	GameObject orchestra;
+
 	Hashtable selectedInstruments;
 
 	AudioSource celloAudioSource, violinAudioSource, guitarAudioSource,
 	saxAudioSource, fluteAudioSource, drumAudioSource;
 
-	int celloTouchCount, violinTouchCount, guitarTouchCount,
+/*	int celloTouchCount, violinTouchCount, guitarTouchCount,
 	saxTouchCount, fluteTouchCount, drumTouchCount;
+*/
+	bool celloCurrentlyTouched, violinCurrentlyTouched, guitarCurrentlyTouched,
+	saxCurrentlyTouched, fluteCurrentlyTouched, drumCurrentlyTouched;
+
+	bool celloPrevTouched, violinPrevTouched, guitarPrevTouched,
+	saxPrevTouched, flutePrevTouched, drumPrevTouched;
 
 	bool celloSelected, violinSelected, guitarSelected,
 	saxSelected, fluteSelected, drumSelected;
@@ -60,12 +68,28 @@ public class KinectInputReceiver : MonoBehaviour {
 		// touch counters
 		// wenn gerade Zahl -> not in selected Instruments hashtable
 		// wenn ungerade Zahl -> in selected Instruments hashtable
-		celloTouchCount = 0;
+/*		celloTouchCount = 0;
 		violinTouchCount = 0;
 		guitarTouchCount = 0;
 		saxTouchCount = 0;
 		fluteTouchCount = 0;
 		drumTouchCount = 0;
+*/
+		// previously touched bools
+		celloPrevTouched = false;
+		violinPrevTouched = false;
+		guitarPrevTouched = false;
+		saxPrevTouched = false;
+		flutePrevTouched = false;
+		drumPrevTouched = false;
+
+		// currently touched bools
+		celloCurrentlyTouched = false;
+		violinCurrentlyTouched = false;
+		guitarCurrentlyTouched = false;
+		saxCurrentlyTouched = false;
+		fluteCurrentlyTouched = false;
+		drumCurrentlyTouched = false;
 
 		// selected bools
 		celloSelected = false;
@@ -93,160 +117,97 @@ public class KinectInputReceiver : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//TEST
-		virtualHand = GameObject.Find ("VirtualHand(Clone)");
+		// TEST 2
+		orchestra = GameObject.Find ("Orchestra");
 
-		if (virtualHand == null) {
-			Debug.Log("Waiting for Server to start...");
-		} 
-		else {
+		if (orchestra == null) {
+			Debug.Log ("Waiting for Orchestra to exist...");
+		} else {
+			AudioSource[] soundsOfAllinstruments = orchestra.GetComponentsInChildren<AudioSource>();
 
-			vH_Interaction = virtualHand.GetComponent<VirtualHandInteraction> ();
-		}
-
-		// 2) 
-		// check & update selected Instruments hashtable
-		// wenn Instrumente einmal selektiert/beruehrt -> in die selected Instruments hashtable gespeichert
-/*		Hashtable collidees = vH_Interaction.getCollidees ();
-
-		if (collidees.ContainsKey (cello.GetInstanceID ())) {
-			celloTouchCount++;
-			celloSelected = true;
-		}
-		if (collidees.ContainsKey (violin.GetInstanceID ())) {
-			violinTouchCount++;
-			violinSelected = true;
-		}
-		if (collidees.ContainsKey (guitar.GetInstanceID ())) {
-			guitarTouchCount++;
-			guitarSelected = true;
-		}
-		if (collidees.ContainsKey (sax.GetInstanceID ())) {
-			saxTouchCount++;
-			saxSelected = true;
-		}
-		if (collidees.ContainsKey (flute.GetInstanceID ())) {
-			fluteTouchCount++;
-			fluteSelected = true;
-		}
-		if (collidees.ContainsKey (drum.GetInstanceID ())) {
-			drumTouchCount++;
-			drumSelected = true;
-		}
-
-		// Add or Remove
-		if(celloSelected){
-			selectedInstruments.Add (cello.GetInstanceID (), cello);
-		}else if((!celloSelected) && (celloTouchCount > 0)){
-			// 6) 
-			// nochmal instrument beruehren/"selektieren" 
-			// -> audio stop
-			celloAudioSource.Stop();
+			// TASTENABFRAGE
+			// fetch alle input tasten, die fuer den Kinect in Faast gut funktionieren
+			if (Input.GetKeyDown ("g")) {
+				celloPlay = true;
+				violinPlay = true;
+				guitaPlay = true;
+				
+			} else if (Input.GetKeyUp ("g")) {
+				celloPlay = false;
+				violinPlay = false;
+				guitaPlay = false;
+			}
+			if (Input.GetKeyDown ("b")) {
+				saxPlay = true;
+				flutePlay = true;
+				drumPlay = true;
+				
+			} else if (Input.GetKeyUp ("b")) {
+				saxPlay = false;
+				flutePlay = false;
+				drumPlay = false;
+			}
 			
-			// -> not in selected Instru anymore (kann getauscht werden etc)
-			selectedInstruments.Remove(cello.GetInstanceID());
-		}
-		if(violinSelected){
-			selectedInstruments.Add (violin.GetInstanceID (), violin);
-		}else if((!violinSelected) && (violinTouchCount > 0)){
-			violinAudioSource.Stop();
-			selectedInstruments.Remove(violin.GetInstanceID());
-		}
-		if(guitarSelected){
-			selectedInstruments.Add (guitar.GetInstanceID (), guitar);
-		}else if((!guitarSelected) && (guitarTouchCount > 0)){
-			guitarAudioSource.Stop();
-			selectedInstruments.Remove(guitar.GetInstanceID());
-		}
-		if(saxSelected){
-			selectedInstruments.Add (sax.GetInstanceID (), sax);
-		}else if((!saxSelected) &&(saxTouchCount > 0)){
-			saxAudioSource.Stop();
-			selectedInstruments.Remove(sax.GetInstanceID());
-		}
-		if(fluteSelected){
-			selectedInstruments.Add (flute.GetInstanceID (), flute);
-		}else if((!fluteSelected) && (fluteTouchCount > 0)){
-			fluteAudioSource.Stop();
-			selectedInstruments.Remove(flute.GetInstanceID());
-		}
-		if(drumSelected){
-			selectedInstruments.Add (drum.GetInstanceID (), drum);
-		}else if((!drumSelected) && (drumTouchCount > 0)){
-			drumAudioSource.Stop();
-			selectedInstruments.Remove(drum.GetInstanceID());
-		}
+			for(int i = 0; i < soundsOfAllinstruments.Length; i++){
+
+				GameObject parent = soundsOfAllinstruments[i].gameObject;
+	/*			if(string.Compare(parent.name, "Guitar") && soundsOfAllinstruments[i].enabled){
+					if (guitaPlay) {
+						guitarAudioSource.Play ();
+						guitarAudioSource.volume = 1.0f;
+					} else {
+						guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
+					}
+				}
+				if(string.Compare(parent.name, "Guitar") && soundsOfAllinstruments[i].enabled){
+					if (guitaPlay) {
+						guitarAudioSource.Play ();
+						guitarAudioSource.volume = 1.0f;
+					} else {
+						guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
+					}
+				} */
+				if((string.Compare(parent.name, "Guitar") == 0) && (soundsOfAllinstruments[i].enabled)){
+					if (guitaPlay) {
+						guitarAudioSource.Play ();
+						guitarAudioSource.volume = 1.0f;
+					} else {
+						guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
+					}
+				}
+	/*			if(string.Compare(parent.name, "Guitar") && soundsOfAllinstruments[i].enabled){
+					if (guitaPlay) {
+						guitarAudioSource.Play ();
+						guitarAudioSource.volume = 1.0f;
+					} else {
+						guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
+					}
+				}
+				if(string.Compare(parent.name, "Guitar") && soundsOfAllinstruments[i].enabled){
+					if (guitaPlay) {
+						guitarAudioSource.Play ();
+						guitarAudioSource.volume = 1.0f;
+					} else {
+						guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
+					}
+				}
+				if(string.Compare(parent.name, "Guitar") && soundsOfAllinstruments[i].enabled){
+					if (guitaPlay) {
+						guitarAudioSource.Play ();
+						guitarAudioSource.volume = 1.0f;
+					} else {
+						guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
+					}
+				}  */
+
+			}   // END FOR
+
+
+
+		}   // END ELSE
+
+
 		
-		// 3) 
-		// fetch alle input tasten, die fuer den Kinect in Faast gut funktionieren
-		if (Input.GetKeyDown ("g")) {
-			celloPlay = true;
-			violinPlay = true;
-			guitaPlay = true;
-
-		} else if (Input.GetKeyUp ("g")) {
-			celloPlay = false;
-			violinPlay = false;
-			guitaPlay = false;
-		}
-		if (Input.GetKeyDown ("b")) {
-			saxPlay = true;
-			flutePlay = true;
-			drumPlay = true;
-		
-		} else if (Input.GetKeyUp ("b")) {
-			saxPlay = false;
-			flutePlay = false;
-			drumPlay = false;
-		}
-
-		// 4) 
-		// bring damit alle selektierte instrumente zum singen - audio start
-		if (celloPlay) {
-			celloAudioSource.Play ();
-			celloAudioSource.volume = 1.0f;
-		} else {
-			// 5) 
-			// wenn lange nix mehr - instrum werden leiser -> audio leiser
-			celloAudioSource.volume = celloAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
-		}
-
-		if (violinPlay) {
-			violinAudioSource.Play ();
-			violinAudioSource.volume = 1.0f;
-		} else {
-			violinAudioSource.volume = violinAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
-		}
-
-		if (guitaPlay) {
-			guitarAudioSource.Play ();
-			guitarAudioSource.volume = 1.0f;
-		} else {
-			guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
-		}
-
-		if (saxPlay) {
-			saxAudioSource.Play();
-			saxAudioSource.volume = 0.3f;
-		} else {
-			saxAudioSource.volume = saxAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
-		}
-
-		if (flutePlay) {
-			fluteAudioSource.Play();
-			fluteAudioSource.volume = 1.0f;
-		} else {
-			fluteAudioSource.volume = fluteAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
-		}
-
-		if (drumPlay) {
-			drumAudioSource.Play();
-			drumAudioSource.volume = 1.0f;
-		} else {
-			drumAudioSource.volume = drumAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
-		}
-
-*/
-	}
+	}  // END UPDATE
 
 }

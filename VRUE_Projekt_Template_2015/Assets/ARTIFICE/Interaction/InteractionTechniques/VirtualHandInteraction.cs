@@ -173,6 +173,21 @@ public class VirtualHandInteraction : ObjectSelectionBase
             {
 				Debug.Log(collidee.name);
 
+
+
+				// TEST
+				if(Network.isServer){
+					AudioSource audioS = other.GetComponent<AudioSource>();
+					if(audioS.enabled){
+						audioS.Stop ();
+						audioS.enabled = false;
+					}else{
+						audioS.enabled = true;
+						audioS.Stop ();
+					}
+				}
+
+
                 collidees.Add(collidee.GetInstanceID(), collidee);
                 //Debug.Log(collidee.GetInstanceID());
 
