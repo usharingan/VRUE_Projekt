@@ -54,7 +54,12 @@ public class VirtualHandInteraction : ObjectSelectionBase
 	{
 		//if (this.transform.parent.GetType().ToString() == "Spacemouse") {
 		if (this.transform.parent != null && this.transform.parent.FindChild ("TrackerObject") != null) {
-			tracker = this.transform.parent.FindChild ("TrackerObject").gameObject;
+			if(Network.isServer){
+				tracker = GameObject.Find("arm_wrist_left");
+			}else{
+				tracker = this.transform.parent.FindChild ("TrackerObject").gameObject;
+			}
+
 		}
 		//}
 
