@@ -1,0 +1,127 @@
+digraph OpenTracker {
+{rank=same; "VRPNConfig(1C79B468): 0" "ConsoleConfig(1CA73F38): 0" "TimeConfig(1CA72F60): 0" "SpaceDeviceConfig(1CA73828): 0" "EventTransform1C670C40: 0" ;}
+{rank=same; "UnitySink1C5F9788: 1" ;}
+{rank=same; "ConsoleSink(1C8D51E8): 2" ;}
+{rank=same; "EventTransform1C66FF40: 1" ;}
+{rank=same; "VRPNSource1C8D5D88: 0" ;}
+{rank=same; "UnitySink(1C5F9870): 2" ;}
+{rank=same; "EventTransform1C671340: 1" ;}
+{rank=same; "VRPNSource1C8D58B0: 0" ;}
+{rank=same; "UnitySink(1C5F8BC0): 2" ;}
+{rank=same; "EventTransform1C670340: 1" ;}
+{rank=same; "VRPNSource1C8D59A8: 0" ;}
+{rank=same; "UnitySink(1C5F8398): 2" ;}
+{rank=same; "EventTransform1C670640: 1" ;}
+{rank=same; "VRPNSource1C8D5E80: 0" ;}
+{rank=same; "UnitySink(1C5F9958): 2" ;}
+{rank=same; "EventTransform1C671740: 1" ;}
+{rank=same; "VRPNSource1C8D4078: 0" ;}
+{rank=same; "UnitySink(1C5F89F0): 2" ;}
+{rank=same; "EventTransform1C671240: 1" ;}
+{rank=same; "VRPNSource1C8D4170: 0" ;}
+{rank=same; "UnitySink(1C5F8650): 2" ;}
+{rank=same; "EventTransform1C670E40: 1" ;}
+{rank=same; "VRPNSource1CBEA930: 0" ;}
+{rank=same; "UnitySink(1C5F8738): 2" ;}
+{rank=same; "EventTransform1C670D40: 1" ;}
+{rank=same; "VRPNSource1CBEAA28: 0" ;}
+{rank=same; "UnitySink(1C5F9C10): 2" ;}
+{rank=same; "EventTransform1C671640: 1" ;}
+{rank=same; "VRPNSource1CBEBB98: 0" ;}
+{rank=same; "UnitySink(1C5F7FF8): 2" ;}
+{rank=same; "EventTransform1C670F40: 1" ;}
+{rank=same; "VRPNSource1CBEAB20: 0" ;}
+{rank=same; "UnitySink(1C5F80E0): 2" ;}
+{rank=same; "EventTransform1C670040: 1" ;}
+{rank=same; "VRPNSource1CBEA838: 0" ;}
+{rank=same; "UnitySink(1C5F8AD8): 2" ;}
+{rank=same; "EventTransform1C671040: 1" ;}
+{rank=same; "VRPNSource1CBEA648: 0" ;}
+{rank=same; "UnitySink(1C5F81C8): 2" ;}
+{rank=same; "EventTransform1C671140: 1" ;}
+{rank=same; "VRPNSource1CBEAC18: 0" ;}
+{rank=same; "UnitySink(1C5F8CA8): 2" ;}
+{rank=same; "EventTransform1C670140: 1" ;}
+{rank=same; "VRPNSource1CBEB3D8: 0" ;}
+{rank=same; "UnitySink(1C5F82B0): 2" ;}
+{rank=same; "EventTransform1C671440: 1" ;}
+{rank=same; "VRPNSource1CBEAD10: 0" ;}
+{rank=same; "UnitySink(1C5F8480): 2" ;}
+{rank=same; "EventTransform1C671C40: 1" ;}
+{rank=same; "VRPNSource1CBEA740: 0" ;}
+{rank=same; "UnitySink(1C5F8568): 2" ;}
+{rank=same; "EventTransform1C671940: 1" ;}
+{rank=same; "VRPNSource1CBEAF00: 0" ;}
+{rank=same; "UnitySink(1C5F8820): 2" ;}
+{rank=same; "EventTransform1C670240: 1" ;}
+{rank=same; "VRPNSource1CBEAFF8: 0" ;}
+{rank=same; "UnitySink(1C5F9DE0): 2" ;}
+{rank=same; "EventTransform1C670540: 1" ;}
+{rank=same; "VRPNSource1CBEA078: 0" ;}
+{rank=same; "UnitySink(1C5F9EC8): 2" ;}
+{rank=same; "EventTransform1C670740: 1" ;}
+{rank=same; "VRPNSource1CBEB0F0: 0" ;}
+{rank=same; "UnitySink(1C5F9CF8): 2" ;}
+{rank=same; "EventTransform1C670940: 1" ;}
+{rank=same; "VRPNSource1CBEB1E8: 0" ;}
+{rank=same; "UnitySink(1B88B420): 2" ;}
+{rank=same; "EventTransform1C671840: 1" ;}
+{rank=same; "VRPNSource1CBEB2E0: 0" ;}
+{rank=same; "UnitySink(1B88BD30): 2" ;}
+{rank=same; "EventTransform1C670A40: 1" ;}
+{rank=same; "VRPNSource1CBEA268: 0" ;}
+{rank=same; "UnitySink(1B88B6D8): 2" ;}
+{rank=same; "EventTransform1C670840: 1" ;}
+{rank=same; "VRPNSource1CBEB4D0: 0" ;}
+{rank=same; "UnitySink(1B88BA78): 2" ;}
+"EventTransform1C670C40: 0" -> "UnitySink1C5F9788: 1";
+"UnitySink1C5F9788: 1" -> "ConsoleSink1C8D51E8: 2";
+"EventTransform1C66FF40: 1" -> "UnitySink1C5F9870: 2";
+"VRPNSource1C8D5D88: 0" -> "EventTransform1C66FF40: 1";
+"EventTransform1C671340: 1" -> "UnitySink1C5F8BC0: 2";
+"VRPNSource1C8D58B0: 0" -> "EventTransform1C671340: 1";
+"EventTransform1C670340: 1" -> "UnitySink1C5F8398: 2";
+"VRPNSource1C8D59A8: 0" -> "EventTransform1C670340: 1";
+"EventTransform1C670640: 1" -> "UnitySink1C5F9958: 2";
+"VRPNSource1C8D5E80: 0" -> "EventTransform1C670640: 1";
+"EventTransform1C671740: 1" -> "UnitySink1C5F89F0: 2";
+"VRPNSource1C8D4078: 0" -> "EventTransform1C671740: 1";
+"EventTransform1C671240: 1" -> "UnitySink1C5F8650: 2";
+"VRPNSource1C8D4170: 0" -> "EventTransform1C671240: 1";
+"EventTransform1C670E40: 1" -> "UnitySink1C5F8738: 2";
+"VRPNSource1CBEA930: 0" -> "EventTransform1C670E40: 1";
+"EventTransform1C670D40: 1" -> "UnitySink1C5F9C10: 2";
+"VRPNSource1CBEAA28: 0" -> "EventTransform1C670D40: 1";
+"EventTransform1C671640: 1" -> "UnitySink1C5F7FF8: 2";
+"VRPNSource1CBEBB98: 0" -> "EventTransform1C671640: 1";
+"EventTransform1C670F40: 1" -> "UnitySink1C5F80E0: 2";
+"VRPNSource1CBEAB20: 0" -> "EventTransform1C670F40: 1";
+"EventTransform1C670040: 1" -> "UnitySink1C5F8AD8: 2";
+"VRPNSource1CBEA838: 0" -> "EventTransform1C670040: 1";
+"EventTransform1C671040: 1" -> "UnitySink1C5F81C8: 2";
+"VRPNSource1CBEA648: 0" -> "EventTransform1C671040: 1";
+"EventTransform1C671140: 1" -> "UnitySink1C5F8CA8: 2";
+"VRPNSource1CBEAC18: 0" -> "EventTransform1C671140: 1";
+"EventTransform1C670140: 1" -> "UnitySink1C5F82B0: 2";
+"VRPNSource1CBEB3D8: 0" -> "EventTransform1C670140: 1";
+"EventTransform1C671440: 1" -> "UnitySink1C5F8480: 2";
+"VRPNSource1CBEAD10: 0" -> "EventTransform1C671440: 1";
+"EventTransform1C671C40: 1" -> "UnitySink1C5F8568: 2";
+"VRPNSource1CBEA740: 0" -> "EventTransform1C671C40: 1";
+"EventTransform1C671940: 1" -> "UnitySink1C5F8820: 2";
+"VRPNSource1CBEAF00: 0" -> "EventTransform1C671940: 1";
+"EventTransform1C670240: 1" -> "UnitySink1C5F9DE0: 2";
+"VRPNSource1CBEAFF8: 0" -> "EventTransform1C670240: 1";
+"EventTransform1C670540: 1" -> "UnitySink1C5F9EC8: 2";
+"VRPNSource1CBEA078: 0" -> "EventTransform1C670540: 1";
+"EventTransform1C670740: 1" -> "UnitySink1C5F9CF8: 2";
+"VRPNSource1CBEB0F0: 0" -> "EventTransform1C670740: 1";
+"EventTransform1C670940: 1" -> "UnitySink1B88B420: 2";
+"VRPNSource1CBEB1E8: 0" -> "EventTransform1C670940: 1";
+"EventTransform1C671840: 1" -> "UnitySink1B88BD30: 2";
+"VRPNSource1CBEB2E0: 0" -> "EventTransform1C671840: 1";
+"EventTransform1C670A40: 1" -> "UnitySink1B88B6D8: 2";
+"VRPNSource1CBEA268: 0" -> "EventTransform1C670A40: 1";
+"EventTransform1C670840: 1" -> "UnitySink1B88BA78: 2";
+"VRPNSource1CBEB4D0: 0" -> "EventTransform1C670840: 1";
+}

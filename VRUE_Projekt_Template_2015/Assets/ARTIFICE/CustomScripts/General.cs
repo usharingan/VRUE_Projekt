@@ -7,9 +7,17 @@ public class General : MonoBehaviour {
 	public GameObject kinect;
 	//GameObject kinectChild;
 
+	// TEST
+	public GameObject virtHand;
+	public GameObject arm_wrist_left;
+	public GameObject trackerObj;
+
+
 	// Use this for initialization
 	void Start () {
 		Physics.gravity = Vector3.zero;
+
+
 	}
 
 	
@@ -22,15 +30,28 @@ public class General : MonoBehaviour {
 		if (spacemouse != null && kinect != null) {
 			if (Network.isServer) {
 
-				spacemouse.SetActive (false);
-				kinect.SetActive (true);
-			
 				//spacemouse off
 				//child from spacemouse off
-				
-			
+				spacemouse.SetActive (false);
+
 				//trackerlefthand on
 				//trackerobject child (lefthand) on
+				kinect.SetActive (true);
+			
+				// TEST
+				// TEST
+				virtHand = GameObject.Find ("VirtualHand(Clone)");
+				arm_wrist_left = GameObject.Find ("arm_finger_3a_left");//"arm_wrist_left");
+				trackerObj = GameObject.Find("TrackerObject");
+
+				// put virtual Hand position on arm_wrist_left gameObj
+	//			virtHand.transform.position = arm_wrist_left.transform.position;
+	//			virtHand.transform.rotation = arm_wrist_left.transform.rotation;
+
+				trackerObj.transform.position = arm_wrist_left.transform.position; //+ new Vector3(0.0f, 0.5f, 0.0f);
+				trackerObj.transform.rotation = arm_wrist_left.transform.rotation;
+			
+
 			
 			} else {
 				if (Network.isClient) {
