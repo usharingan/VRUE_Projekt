@@ -181,8 +181,14 @@ public class VirtualHandInteraction : ObjectSelectionBase
 					if(audioS.enabled){
 						audioS.Stop ();
 						audioS.enabled = false;
+
+						Debug.Log ("AUDIO SOURCE DISABLED");
+
 					}else{
 						audioS.enabled = true;
+
+						Debug.Log ("AUDIO SOURCE ENABLED");
+
 						audioS.Stop ();
 					}
 				}

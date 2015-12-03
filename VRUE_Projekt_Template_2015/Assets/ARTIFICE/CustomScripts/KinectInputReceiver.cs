@@ -127,26 +127,44 @@ public class KinectInputReceiver : MonoBehaviour {
 
 			// TASTENABFRAGE
 			// fetch alle input tasten, die fuer den Kinect in Faast gut funktionieren
-			if (Input.GetKeyDown ("g")) {
+
+	//		if (Input.GetKeyDown (/*"g"*/KeyCode.G)) {
+
+	//		if (Input.GetButtonDown ("gPressed")) {
+
+			//if(Input.GetKey("g")){
+			if(Input.GetKeyUp("g")){
+
+				Debug.Log ("PRESSED G");
+
 				celloPlay = true;
 				violinPlay = true;
 				guitaPlay = true;
 				
-			} else if (Input.GetKeyUp ("g")) {
+			}/* else if (Input.GetKeyUp ("g")) {
+
+				Debug.Log ("UN-PRESSED G");
+
 				celloPlay = false;
 				violinPlay = false;
 				guitaPlay = false;
 			}
-			if (Input.GetKeyDown ("b")) {
+			if (Input.GetButtonDown ("bPressed")) {
+
+				Debug.Log ("PRESSED B");
+
 				saxPlay = true;
 				flutePlay = true;
 				drumPlay = true;
 				
 			} else if (Input.GetKeyUp ("b")) {
+
+				Debug.Log ("UN-PRESSED B");
+
 				saxPlay = false;
 				flutePlay = false;
 				drumPlay = false;
-			}
+			}*/
 			
 			for(int i = 0; i < soundsOfAllinstruments.Length; i++){
 
@@ -170,8 +188,17 @@ public class KinectInputReceiver : MonoBehaviour {
 				if((string.Compare(parent.name, "Guitar") == 0) && (soundsOfAllinstruments[i].enabled)){
 					if (guitaPlay) {
 						guitarAudioSource.Play ();
+
+						Debug.Log ("GUITAR PLAY");
+
 						guitarAudioSource.volume = 1.0f;
+
+						Debug.Log ("GUITAR VOLUME 1");
+
 					} else {
+
+						Debug.Log ("GUITAR SLOWLY LEISER");
+
 						guitarAudioSource.volume = guitarAudioSource.volume- (volumeReductionFactor * Time.deltaTime);
 					}
 				}
