@@ -4,12 +4,12 @@ TODO:
 [x] Fragestunde, Fehler
 [x] Test Zusammenspiel von Kinect mit SpaceMouse
 [x] Animationen Models 
-[ ] Interactionstechniken - GoGo
 [ ] SpaceMouse - position veraendern + aktivieren 
 [ ] Spawn Instruments
-[ ] Ein- und Auswaehlen der Objekte fuer Kinect
-[ ] Kinect - kontinuierliche Bewegung + Script
 [ ] SpaceMouse - Volume veraendern
+[ ] Ein- und Auswaehlen der Objekte fuer Kinect
+[ ] Interactionstechniken - GoGo
+[ ] Kinect - kontinuierliche Bewegung + Script
 [x] Humanoid Asset - Search, Import
 [x] Humanoid Asset - Einbinden, alten ersetzen
 [x] Podest fuer Mickey

@@ -59,10 +59,10 @@ public class GoGoInteraction : ObjectSelectionBase
 	protected override void UpdateSelect()
 	{
 		torso = GameObject.Find("VirtualCamera");
-		tracker = GameObject.Find("TrackerObject");
-//		origin = GameObject.Find ("VirtualCamera");    // TEST!  - "spine_upper"... geht nicht :/
+		tracker = GameObject.Find("TrackerObject"); // TEST: "arm_wrist_left" geht nicht...
+		origin = GameObject.Find ("spine_upper");    // TEST!  - "spine_upper"... geht nicht 
 //		origin = GameObject.Find ("Mickey_rotated2");
-		origin = GameObject.Find ("head");
+//		origin = GameObject.Find ("head");
 
 		if (D <= 0) {
 			D = 0.1f;
