@@ -4,16 +4,19 @@ TODO:
 [x] Fragestunde, Fehler
 [x] Test Zusammenspiel von Kinect mit SpaceMouse
 [x] Animationen Models 
-[ ] SpaceMouse - position veraendern + aktivieren 
-[ ] Spawn Instruments
+[x] SpaceMouse - position veraendern + aktivieren 
+[x] Spawn Instruments
 [ ] SpaceMouse - Volume veraendern
+[x] Virtual Hand Fix Mickey
 [ ] Ein- und Auswaehlen der Objekte fuer Kinect
-[ ] Interactionstechniken - GoGo
-[ ] Kinect - kontinuierliche Bewegung + Script
+[ ] Interactionstechniken - GoGo reinkopieren + zum Laufen bringen
+[ ] Kinect - Script
+[x] Kinect - kontinuierliche Bewegung
 [x] Humanoid Asset - Search, Import
 [x] Humanoid Asset - Einbinden, alten ersetzen
 [x] Podest fuer Mickey
+[x] Fix Mickey Problem - Blender, Avatar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[ ] SpaceMouse - Objekte austauschen (wenn Instrument nicht aktiv)
+[x] SpaceMouse - Objekte austauschen (wenn Instrument nicht aktiv)
 [ ] Mickey cooleres Design - Bonus
 [ ] Publikum Sounds - Bonus

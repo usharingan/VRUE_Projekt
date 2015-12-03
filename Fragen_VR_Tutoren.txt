@@ -20,14 +20,23 @@ VR UE Fragen:
 
 - wenn ein parent deaktiviert wird 
 	-> werden auch alle seinen kinder deaktiviert?
+	Antwort: schon...
 
 - no gravity (Obj bleiben im Raum wo wir wollen)
 	-> selektieren, manipulieren -> sie fallen auf dem boden (gravity da!) oder sie schweben weg...??
+	Antwort: nach Manipulation, Fkt mit alles zurück auf 0 setzen, velocity....hack, Pos neu setzen
 
 - wieso ist der actor Mickey bei Andreas schon da und bei mir nicht?
+	Antwort: git, stick kopieren 
+
+---------------------------------------------------
 
 - Kinect Script - virtual Hand = nullpointer...?
+	Fixed?...
 
-- 
+- Warum Objekte nicht bewegen koennen (gespawnte)?
+	Fkt jetzt...
+
+- GoGo Interaction! (Torso sollte doch gehen! - sind das alles GameObjects??)
 
 
