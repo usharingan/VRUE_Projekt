@@ -95,7 +95,7 @@ public class SpawnInstrumentController : MonoBehaviour {
 		anime.enabled = false;
 
 
-		MeshRenderer ren = obj.AddComponent<MeshRenderer> ();
+		obj.AddComponent<MeshRenderer> ();
 	}
 
 	/*private void SpawnNetworkObject(Transform obj)
