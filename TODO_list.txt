@@ -9,8 +9,8 @@ TODO:
 [x] SpaceMouse - Volume veraendern
 [x] Virtual Hand Fix Mickey
 [ ] Ein- und Auswaehlen der Objekte fuer Kinect
-[ ] Interactionstechniken - GoGo reinkopieren + zum Laufen bringen
 [ ] Kinect - Script
+[ ] Interactionstechniken - GoGo reinkopieren + zum Laufen bringen
 [x] Kinect - kontinuierliche Bewegung
 [x] Humanoid Asset - Search, Import
 [x] Humanoid Asset - Einbinden, alten ersetzen
