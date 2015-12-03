@@ -6,7 +6,7 @@ TODO:
 [x] Animationen Models 
 [x] SpaceMouse - position veraendern + aktivieren 
 [x] Spawn Instruments
-[ ] SpaceMouse - Volume veraendern
+[x] SpaceMouse - Volume veraendern
 [x] Virtual Hand Fix Mickey
 [ ] Ein- und Auswaehlen der Objekte fuer Kinect
 [ ] Interactionstechniken - GoGo reinkopieren + zum Laufen bringen

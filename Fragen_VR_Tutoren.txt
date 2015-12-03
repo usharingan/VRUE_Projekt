@@ -31,11 +31,11 @@ VR UE Fragen:
 
 ---------------------------------------------------
 
-- Kinect Script - virtual Hand = nullpointer...?
-	Fixed?...
-
 - Warum Objekte nicht bewegen koennen (gespawnte)?
 	Fkt jetzt...
+
+- Kinect Script - virtual Hand = Nullpointer...?
+	- im Update auch....
 
 - GoGo Interaction! (Torso sollte doch gehen! - sind das alles GameObjects??)
 
